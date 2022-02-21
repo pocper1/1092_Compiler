@@ -1,0 +1,117 @@
+S aBDh
+B cC
+C bC|;
+D EF
+E g|;
+F f|;
+END_OF_GRAMMAR
+S a
+B c
+C ;b
+D ;gf
+E ;g
+F ;f
+END_OF_FIRST_SET
+- terminals: S    
+-- rule:aBDh      
+--- find B index: 1
+D's first ;gf
+---- add first(D) into follow(😎
+B + ;gf
+----- B follow: gf
+---- add char h into follow(😎  
+B + h
+----- B follow: gfh
+--- find D index: 2
+---- add char h into follow(D)  
+D + h
+----- D follow: h
+- terminals: B
+-- rule:cC
+--- find C index: 1
+all null add follow
+follow(B): gfh add to follow(C)        
+- terminals: C
+-- rule:bC
+--- find C index: 1
+all null add follow
+follow(C): gfh add to follow(C)        
+-- rule:;
+- terminals: D
+-- rule:EF
+--- find E index: 0
+F's first ;f
+---- add first(F) into follow(E)       
+E + ;f
+----- E follow: f
+all null add follow
+follow(D): h add to follow(E)
+--- find F index: 1
+all null add follow
+follow(D): h add to follow(F)
+- terminals: E
+-- rule:g
+-- rule:;
+- terminals: F
+-- rule:f
+-- rule:;
+----------check change-----------      
+$ changed
+fgh changed
+fgh changed
+h changed
+fh changed
+h changed
+----------end check change-----------  
+- terminals: S
+-- rule:aBDh
+--- find B index: 1
+D's first ;gf
+---- add first(D) into follow(😎       
+B + ;gf
+----- B follow: fghgf
+---- add char h into follow(😎
+B + h
+----- B follow: fghgfh
+--- find D index: 2
+---- add char h into follow(D)
+D + h
+----- D follow: hh
+- terminals: B
+-- rule:cC
+--- find C index: 1
+all null add follow
+follow(B): fghgfh add to follow(C)     
+- terminals: C
+-- rule:bC
+--- find C index: 1
+all null add follow
+follow(C): fghfghgfh add to follow(C)  
+-- rule:;
+- terminals: D
+-- rule:EF
+--- find E index: 0
+F's first ;f
+---- add first(F) into follow(E)       
+E + ;f
+----- E follow: fhf
+all null add follow
+follow(D): hh add to follow(E)
+--- find F index: 1
+all null add follow
+follow(D): hh add to follow(F)
+- terminals: E
+-- rule:g
+-- rule:;
+- terminals: F
+-- rule:f
+-- rule:;
+----------check change-----------      
+----------end check change-----------  
+
+B fgh
+C fgh
+D h
+E fh
+F h
+S $

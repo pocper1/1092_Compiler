@@ -1,0 +1,20 @@
+##### level 1
+---
+# More Difficult
+---
+* A single List
+---
+- [ ] Give Up
+- [X] Keep Fighting
+---
+## The music
+![Best Music Ever](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[ Image   ](https://i.insider.com/61135525ad63f30019501966?width=750&format=jpeg&auto=webp)
+
+## The Myth
+> One day, she picked up a **strange book** and then started 
+> to gain the power of controlling **tentacles**. To her, 
+> **tentacles** are just a part in her ordinary life; it has 
+> **never been a big deal for her**. However, her girly mind does
+> want to get them dressed up and stay pretty.
+---

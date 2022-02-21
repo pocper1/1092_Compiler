@@ -1,0 +1,55 @@
+// {
+//     "configurations": [
+//       {
+//         "name": "MinGW",
+//         "intelliSenseMode": "clang-x64",
+//         "compilerPath": "C:/LLVM/bin/gcc.exe",
+//         "includePath": [
+//           "${workspaceFolder}"
+//         ],
+//         "defines": [],
+//         "browse": {
+//           "path": [
+//             "${workspaceFolder}"
+//           ],
+//           "limitSymbolsToIncludedHeaders": true,
+//           "databaseFilename": ""
+//         },
+//         "cStandard": "c11",
+//         "cppStandard": "c++17"
+//       }
+//     ],
+//     "version": 4
+//   }
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Compile", 
+        "command": "clang++", 
+        "args": [
+          "${file}",
+          "-o",
+          "${fileDirname}/${fileBasenameNoExtension}.exe",
+          "-g", 
+          "-Wall",
+          "-static-libgcc",
+          "-fcolor-diagnostics",
+          "--target=x86_64-w64-mingw", 
+          "-std=c++11" 
+        ], 
+        "type": "shell", 
+        "group": {
+          "kind": "build",
+          "isDefault": true 
+        },
+        "presentation": {
+          "echo": true,
+          "reveal": "always", 
+          "focus": false, 
+          "panel": "shared" 
+        }
+        // "problemMatcher":"$gcc" 
+      }
+    ]
+  }

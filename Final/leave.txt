@@ -1,0 +1,19 @@
+%type <intval> LOGICAL_OP AND_OP OR_OP NOT_OP VARIABLE
+%type <intval> PLUS MINUS MULTIPLY DIVIDE MODULUS
+%type <intval> GREATER SMALLER EQUAL
+%type <intval> IF_EXP TEST_EXP THEN_EXP ELSE_EXP
+
+%type <intval> NUM_OP PLUS MINUS MULTIPLY DIVIDE MODULUS
+
+MINUS MINUS_EXPS MULTIPLY MULTIPLY_EXPS DIVIDE DIVIDE_EXPS
+%type <intval> EXP
+%type <intval> VARIABLE
+%type <String> number ID Bool_val
+%type <intval> GREATER SMALLER EQUAL
+ID {letter}({letter}|{digit}|'-')*
+
+            }
+{ID}	    {  
+                yylval.String = strdup(yytext);
+                return (ID);
+            }
